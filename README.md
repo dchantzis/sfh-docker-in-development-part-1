@@ -1,5 +1,26 @@
+**Last Updated: 2020**
+
 # Servers For Hackers - Docker in Development Part I
-Source: https://serversforhackers.com/s/docker-in-dev-v2-i
+Source: [https://serversforhackers.com/s/docker-in-dev-v2-i](https://serversforhackers.com/s/docker-in-dev-v2-i)
+
+## Table of Contents
+1. [Course Intro](#01-course-intro)
+2. [Images vs Containers]()
+3. [Docker Images]()
+4. [Using Dockerfiles]()
+5. [Serving Web Files]()
+6. [Running Multiple Processes]()
+7. [Configuring PHP-FPM]()
+8. [Docker Logs]()
+9. [Entrypoint vs Cmd]()
+10. [Docker Networks Intro]()
+11. [Connecting Containers]()
+12. [Docker Volumes]()
+
+---
+
+## 01: Course Intro
+Source: [https://serversforhackers.com/c/div-intro](https://serversforhackers.com/c/div-intro)
 
 We will build an application Image and from that we can start and run Containers
 that will run our application. We will see how we can connect our application Container
@@ -8,11 +29,8 @@ And in this way we will run an application, run migrations and have a database t
 and how to persist that data using Docker Volumes.
 We will make an Image using a Dockerfile.
 
-## 01: Course Intro
-Source: https://serversforhackers.com/c/div-intro
-
 ## 02: Images vs Containers
-Source: https://serversforhackers.com/c/div-images-vs-containers
+Source: [https://serversforhackers.com/c/div-images-vs-containers](https://serversforhackers.com/c/div-images-vs-containers)
 
 ### Images
 A docker Image is like a Class. A Container is an instance of an Image, just like an Object is an instance of some Class.
@@ -78,6 +96,7 @@ docker image rm $(docker image ls -q)
 ---
 
 ## 03: Docker Images
+Source: [https://serversforhackers.com/c/div-docker-images](https://serversforhackers.com/c/div-docker-images)
 
 ### Goals
 
@@ -170,7 +189,7 @@ We just get the last image of the completed work as a result.
 ---
 
 ## 04: Using Dockerfiles
-Source: https://serversforhackers.com/c/div-docker-images
+Source: [https://serversforhackers.com/c/div-docker-images](https://serversforhackers.com/c/div-docker-images)
 
 We use a Dockerfile to build a new image. Dockerfiles make creating an image from 
 a container easier (it's code in a file you can commit SCM).
@@ -277,7 +296,7 @@ docker ps
 ---
 
 ## 05: Serving Web Files
-Source: https://serversforhackers.com/c/div-serving-web-files
+Source: [https://serversforhackers.com/c/div-serving-web-files](https://serversforhackers.com/c/div-serving-web-files)
 
 Remove the running Container:
 ```
@@ -385,7 +404,8 @@ Php FPM needs to be running to fulfill a php request and we have only specified 
 ---
 
 ## 06: Running Multiple Processes
-Source: https://serversforhackers.com/c/div-running-multiple-processes
+Source: [https://serversforhackers.com/c/div-running-multiple-processes](https://serversforhackers.com/c/div-running-multiple-processes)
+
 We need to get both PH and Nginx running on this Container at the same time.
 We'll use Supervisord to do that.
 
@@ -478,7 +498,7 @@ curl localhost:80/index.php
 ---
 
 ## 07. Configuring PHP-FPM
-Source: https://serversforhackers.com/c/div-configuring-php-fpm
+Source: [https://serversforhackers.com/c/div-configuring-php-fpm](https://serversforhackers.com/c/div-configuring-php-fpm)
 
 We need to add some custom PHP configuration, especially so it does not run as a daemon.
 
@@ -512,8 +532,8 @@ We will se in the output that php-fpm is running:
 2020-03-18 09:28:56,330 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2020-03-18 09:28:56,331 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 ```
-## 07: Docker Logs
-Source: https://serversforhackers.com/c/div-docker-logs
+## 08: Docker Logs
+Source: [https://serversforhackers.com/c/div-docker-logs](https://serversforhackers.com/c/div-docker-logs)
 
 We need to make a tweak so everything outputs to stdout or stdeer.
 If we do that successfully, we can use Docker's logging mechanism to see 
@@ -569,8 +589,8 @@ Then refresh the browser to `localhost:8080/index.php` and check the output on t
 
 ---
 
-## 08: Entrypoint vs Cmd
-Source: https://serversforhackers.com/c/div-entrypoint-vs-cmd
+## 09: Entrypoint vs Cmd
+Source: [https://serversforhackers.com/c/div-entrypoint-vs-cmd](https://serversforhackers.com/c/div-entrypoint-vs-cmd) 
 
 We see how to use an ENTRYPOINT instead of CMD within a Dockerfile in order to setup a script
 that is always run (no matter what) when a container is spun up from the image we make.
@@ -636,7 +656,7 @@ docker run -d --rm -p 8080:80 -v %cd%/application:/var/www/html/public shippingd
 ---
 
 ## 10: Docker Networks Intro
-Source: https://serversforhackers.com/c/div-docker-networks-intro
+Source: [https://serversforhackers.com/c/div-docker-networks-intro](https://serversforhackers.com/c/div-docker-networks-intro)
 
 We will see how we can get containers to talk to each other over a Docker network.
 
@@ -719,7 +739,7 @@ docker network inspect appnet
 ```
 
 ## 11: Connecting Containers
-Source: https://serversforhackers.com/c/div-connecting-containers
+Source: [https://serversforhackers.com/c/div-connecting-containers](https://serversforhackers.com/c/div-connecting-containers)
 
 We get a Laravel application running.
 
@@ -798,7 +818,7 @@ docker network inspect appnet
 ---
 
 ## 12: Docker Volumes
-Source: https://serversforhackers.com/c/div-docker-volumes
+Source: [https://serversforhackers.com/c/div-docker-volumes](https://serversforhackers.com/c/div-docker-volumes)
 
 We will cover Docker volumes and make sure we have set our docker-compose.yml file correctly to use our created volumes.
 
@@ -893,12 +913,7 @@ the database data will persist (assuming, of course, we don't delete the volume 
 
 ---
 
-# Docker in Development Part II
-Source: https://serversforhackers.com/s/docker-in-dev-v2-ii
+Walk-through of Course by: [Server For Hackers](https://serversforhackers.com)
 
-We continue the Docker in Dev course by using Docker Compose and building a development workflow.
-
-## 01: Docker Compose Intro
-
-We will see how we can start to use Docker Compose to more easily control our Docker environment.
-
+- [dimitrioschantzis.com](http://www.dimitrioschantzis.com)
+- <https://github.com/dchantzis>
