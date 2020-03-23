@@ -1,5 +1,7 @@
 **Last Updated: 2020**
 
+Git: [https://github.com/dchantzis/sfh-docker-in-development-part-1] (https://github.com/dchantzis/sfh-docker-in-development-part-1)
+
 # Servers For Hackers - Docker in Development Part I
 Source: [https://serversforhackers.com/s/docker-in-dev-v2-i](https://serversforhackers.com/s/docker-in-dev-v2-i)
 
@@ -915,8 +917,6 @@ the database data will persist (assuming, of course, we don't delete the volume 
 ---
 
 Walk-through of Course by: [Server For Hackers](https://serversforhackers.com)
-
-Git Repository: [https://github.com/dchantzis/sfh-docker-in-development-part-1] (https://github.com/dchantzis/sfh-docker-in-development-part-1)
 
 - [dimitrioschantzis.com](http://www.dimitrioschantzis.com)
 - <https://github.com/dchantzis>
