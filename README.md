@@ -21,7 +21,7 @@ Source: [https://serversforhackers.com/s/docker-in-dev-v2-i](https://serversforh
 
 ---
 
-## 01: Course Intro
+## 01. Course Intro
 Source: [https://serversforhackers.com/c/div-intro](https://serversforhackers.com/c/div-intro)
 
 We will build an application Image and from that we can start and run Containers
@@ -31,7 +31,7 @@ And in this way we will run an application, run migrations and have a database t
 and how to persist that data using Docker Volumes.
 We will make an Image using a Dockerfile.
 
-## 02: Images vs Containers
+## 02. Images vs Containers
 Source: [https://serversforhackers.com/c/div-images-vs-containers](https://serversforhackers.com/c/div-images-vs-containers)
 
 ### Images
@@ -97,7 +97,7 @@ docker image rm $(docker image ls -q)
 
 ---
 
-## 03: Docker Images
+## 03. Docker Images
 Source: [https://serversforhackers.com/c/div-docker-images](https://serversforhackers.com/c/div-docker-images)
 
 ### Goals
@@ -190,7 +190,7 @@ We just get the last image of the completed work as a result.
 
 ---
 
-## 04: Using Dockerfiles
+## 04. Using Dockerfiles
 Source: [https://serversforhackers.com/c/div-docker-images](https://serversforhackers.com/c/div-docker-images)
 
 We use a Dockerfile to build a new image. Dockerfiles make creating an image from 
@@ -297,7 +297,7 @@ docker ps
 
 ---
 
-## 05: Serving Web Files
+## 05. Serving Web Files
 Source: [https://serversforhackers.com/c/div-serving-web-files](https://serversforhackers.com/c/div-serving-web-files)
 
 Remove the running Container:
@@ -405,7 +405,7 @@ Php FPM needs to be running to fulfill a php request and we have only specified 
 
 ---
 
-## 06: Running Multiple Processes
+## 06. Running Multiple Processes
 Source: [https://serversforhackers.com/c/div-running-multiple-processes](https://serversforhackers.com/c/div-running-multiple-processes)
 
 We need to get both PH and Nginx running on this Container at the same time.
@@ -534,7 +534,10 @@ We will se in the output that php-fpm is running:
 2020-03-18 09:28:56,330 INFO success: nginx entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2020-03-18 09:28:56,331 INFO success: php-fpm entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 ```
-## 08: Docker Logs
+
+---
+
+## 08. Docker Logs
 Source: [https://serversforhackers.com/c/div-docker-logs](https://serversforhackers.com/c/div-docker-logs)
 
 We need to make a tweak so everything outputs to stdout or stdeer.
@@ -556,9 +559,9 @@ stderr_logfile=/dev/stderr
 
 We can see that output (for a running Container), like so:
 ```
-> docker run -d --rm -p 8080:80 -v %cd%/appliation:/var/www/html/public shippingdocker/app:latest
+docker run -d --rm -p 8080:80 -v %cd%/appliation:/var/www/html/public shippingdocker/app:latest
 
-> docker logs <CONTAINER_ID> -f
+docker logs <CONTAINER_ID> -f
 ```
 - -f Optional parameter to follow the log on the command line (live output on the command line).
 
@@ -591,7 +594,7 @@ Then refresh the browser to `localhost:8080/index.php` and check the output on t
 
 ---
 
-## 09: Entrypoint vs Cmd
+## 09. Entrypoint vs Cmd
 Source: [https://serversforhackers.com/c/div-entrypoint-vs-cmd](https://serversforhackers.com/c/div-entrypoint-vs-cmd) 
 
 We see how to use an ENTRYPOINT instead of CMD within a Dockerfile in order to setup a script
@@ -616,7 +619,7 @@ docker run -it --rm -p 8080:80 -v %cd%/application:/var/www/html/public shipping
 
 which env
 ```
-so `> env bash` will give us the correct bash.
+so `env bash` will give us the correct bash.
 
 Copy the location of the `env` file (example: `/usr/bin/env`).
 
@@ -657,7 +660,7 @@ docker run -d --rm -p 8080:80 -v %cd%/application:/var/www/html/public shippingd
 
 ---
 
-## 10: Docker Networks Intro
+## 10. Docker Networks Intro
 Source: [https://serversforhackers.com/c/div-docker-networks-intro](https://serversforhackers.com/c/div-docker-networks-intro)
 
 We will see how we can get containers to talk to each other over a Docker network.
@@ -741,7 +744,9 @@ Exit the container and inspect the network `appnet` to view both of the Containe
 docker network inspect appnet
 ```
 
-## 11: Connecting Containers
+---
+
+## 11. Connecting Containers
 Source: [https://serversforhackers.com/c/div-connecting-containers](https://serversforhackers.com/c/div-connecting-containers)
 
 We get a Laravel application running.
@@ -820,7 +825,7 @@ docker network inspect appnet
 
 ---
 
-## 12: Docker Volumes
+## 12. Docker Volumes
 Source: [https://serversforhackers.com/c/div-docker-volumes](https://serversforhackers.com/c/div-docker-volumes)
 
 We will cover Docker volumes and make sure we have set our docker-compose.yml file correctly to use our created volumes.
