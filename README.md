@@ -5,17 +5,17 @@ Source: [https://serversforhackers.com/s/docker-in-dev-v2-i](https://serversforh
 
 ## Table of Contents
 1. [Course Intro](#01-course-intro)
-2. [Images vs Containers]()
-3. [Docker Images]()
-4. [Using Dockerfiles]()
-5. [Serving Web Files]()
-6. [Running Multiple Processes]()
-7. [Configuring PHP-FPM]()
-8. [Docker Logs]()
-9. [Entrypoint vs Cmd]()
-10. [Docker Networks Intro]()
-11. [Connecting Containers]()
-12. [Docker Volumes]()
+2. [Images vs Containers](#02-images-vs-containers)
+3. [Docker Images](#03-docker-images)
+4. [Using Dockerfiles](#04-using-dockerfiles)
+5. [Serving Web Files](#05-serving-web-files)
+6. [Running Multiple Processes](#06-running-multiple-processes)
+7. [Configuring PHP-FPM](#07-configuring-php-fpm)
+8. [Docker Logs](#08-docker-logs)
+9. [Entrypoint vs Cmd](#09-entrypoint-vs-cmd)
+10. [Docker Networks Intro](#10-docker-networks-intro)
+11. [Connecting Containers](#11-connecting-containers)
+12. [Docker Volumes](#12-docker-volumes)
 
 ---
 
@@ -666,6 +666,7 @@ We will create two containers and add them into the new network appnet.
 The containers then can reference eachother - the hostname for each container is taken from the --name
 given to the container. This lets the app container talk to mysql over hostname `mysql`.
 Within the container, you can run `getent hosts mysql` to see the hostname resolution of hostname `mysql`
+
 ---
 
 To list the default Docker networks:
