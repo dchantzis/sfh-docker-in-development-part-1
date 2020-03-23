@@ -1,6 +1,6 @@
 **Last Updated: 2020**
 
-Git: [https://github.com/dchantzis/sfh-docker-in-development-part-1] (https://github.com/dchantzis/sfh-docker-in-development-part-1)
+**Git Repository**: [https://github.com/dchantzis/sfh-docker-in-development-part-1](https://github.com/dchantzis/sfh-docker-in-development-part-1)
 
 # Servers For Hackers - Docker in Development Part I
 Source: [https://serversforhackers.com/s/docker-in-dev-v2-i](https://serversforhackers.com/s/docker-in-dev-v2-i)
