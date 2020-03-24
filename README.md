@@ -567,8 +567,8 @@ docker logs <CONTAINER_ID> -f
 
 However, we have output from supervisor but not from nginx or php.
 
-Nginx
----
+### Nginx
+
 We can adjust the Dockerfile by symlinking the nginx error and access
 logs to stdout and stderr. We will add the symlink in the `Dockerfile`:
 ```
@@ -576,8 +576,8 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
     && ln -sf /dev/stderr /var/log/nginx/error.log
 ```
 
-PHP-FPM
----
+### PHP-FPM
+
 Then in our `php-fpm.conf` file adjust the error_log to:
 ```
 error_log = /proc/self/fd/2
